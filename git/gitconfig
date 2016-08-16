@@ -1,9 +1,10 @@
 [user]
     editor = vim
-    email = alex@lafroscia.com
-    name = Alex LaFroscia
+	email = justin@fingerfoodstudios.com
+	name = Justin Hamade
 [alias]
     # Add
+    timesheet = ! /usr/local/bin/git-timesheet
     ad = add
     aa = add .
 
@@ -73,7 +74,10 @@
 [push]
     # 'git push' will push the current branch to its tracking branch
     # the usual default is to push all branches
-    default = tracking
+	default = current
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
+	autocrlf = input
+[pull]
+	default = current

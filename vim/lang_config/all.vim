@@ -4,12 +4,12 @@
 let mapleader = " "
 
 " Set bash as the prompt for Vim
-set shell=/usr/local/bin/zsh
+set shell=/bin/zsh
 
 " Theme
 syntax enable
-set background=dark
-colorscheme base16-tomorrow
+set background=light
+colorscheme solarized
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup

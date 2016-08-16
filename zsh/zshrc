@@ -20,7 +20,8 @@ ZSH_THEME="agnoster-custom"
 #
 # Which plugins would you like to load?
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew tmux tmuxinator rbenv bower bundle git-flow virtualenvwrapper)
+plugins=(git grunt brew tmux tmuxinator bower bundle git-flow virtualenvwrapper zsh-completions)
+autoload -U compinit && compinit
 
 # -- Oh My Zsh -----------------------------------------------------------------
 source $ZSH/oh-my-zsh.sh
@@ -36,6 +37,7 @@ hash -d dotfiles=/Users/alex/.dotfiles
 # -- Completion Config ---------------------------------------------------------
 
 zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.class'
+zstyle ':completion:*' use-cache yes
 
 # -- Command History -----------------------------------------------------------
 
@@ -147,3 +149,14 @@ if [[ -f "$HOME/.xsh" ]]; then
   source $HOME/.xsh
 fi
 
+#source "$HOME/.antigen/antigen.zsh"
+
+#antigen-use oh-my-zsh
+#antigen-bundle arialdomartini/oh-my-git
+#antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+
+#antigen-apply
+alias vi=/usr/local/opt/vim/bin/vim
+
+export NVM_DIR="/Users/justinhamade/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
